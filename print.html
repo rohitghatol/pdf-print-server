@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="PrintCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="title"></title>
+    <script src="angular.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+    </style>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div>
+        <div ng-show="!ready">
+            <h1>Preparing to Print in <span ng-bind="counter"></span> seconds</h1>
+
+        </div>
+        <div ng-show="ready">
+            <h1>PDF Report</h1>
+            <table border="1" width="100%">
+                <tr><td>#</td><td>Name</td></tr>
+                <tr><td>1</td><td>007 SN</td></tr>
+                <tr><td>2</td><td>107 SN</td></tr>
+                <tr><td>3</td><td>197 SN</td></tr>
+                <tr><td>4</td><td>237 SN</td></tr>
+
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

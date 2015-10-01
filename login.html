@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .login {
+            font-size: 16pt;
+        }
+
+        button {
+            font-size: 10pt;
+        }
+    </style>
+    <script src="app.js"></script>
+</head>
+<body ng-app="app">
+<div ng-controller="LoginCtrl">
+    <div ng-show="!loggedIn">
+        <h1>Login Screen</h1>
+
+        <table class="login">
+            <tr>
+                <td>Username</td>
+                <td><input id="LoginID" type="text" ng-model="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input id="Password" type="password" ng-model="password"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="Login" ng-click="login()">Login</button>
+                </td>
+                <td>
+                    <button ng-click="cancel()">Cancel</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div ng-show="loggedIn">
+        <h1>You have successfully Logged In</h1>
+    </div>
+</div>
+</body>
+</html>
